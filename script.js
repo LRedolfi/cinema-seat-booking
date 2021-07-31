@@ -7,7 +7,7 @@ const movieSelect = document.getElementById('movie');
 populateUI();
 
 let precioBoleto = +movieSelect.value;
-
+//console.log(precioBoleto);
 // Save selected movie index and price
 function setMovieData(movieIndex, moviePrice, parametroDos,parametroTres) {
   localStorage.setItem('selectedMovieIndex', movieIndex);
