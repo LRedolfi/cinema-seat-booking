@@ -6,7 +6,7 @@ const movieSelect = document.getElementById('movie');
 
 populateUI();
 
-let ticketPrice = +movieSelect.value;
+let precioBoleto = +movieSelect.value;
 
 // Save selected movie index and price
 function setMovieData(movieIndex, moviePrice, paramOne) {
@@ -25,7 +25,7 @@ function updateSelectedCount() {
   const selectedSeatsCount = selectedSeats.length;
 
   count.innerText = selectedSeatsCount;
-  total.innerText = selectedSeatsCount * ticketPrice;
+  total.innerText = selectedSeatsCount * precioBoleto;
   
   setMovieData(movieSelect.selectedIndex, movieSelect.value);
 }
@@ -51,7 +51,7 @@ function populateUI() {
 
 // Movie select event
 movieSelect.addEventListener('change', e => {
-  ticketPrice = +e.target.value;
+  precioBoleto = +e.target.value;
   setMovieData(e.target.selectedIndex, e.target.value);
   updateSelectedCount();
 });
